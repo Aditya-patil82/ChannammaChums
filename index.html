@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChannammaChums | Dedicated Exam Hub for RCU Belagavi</title>
+  <meta name="description" content="Exclusive semester exam resource hub for Rani Channamma University (RCU) Belagavi students. BCA, B.Sc, B.Com, BBA expected questions, professor's proof, revision notes & past papers.">
+  
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            purewhite: '#FFFFFF',
+            borderlight: '#E5E7EB',
+            charcoal: '#111827',
+            charcoalsoft: '#374151',
+            charcoallight: '#4B5563',
+            surfacelight: '#F9FAFB',
+            accentblack: '#000000',
+            rcugold: '#B45309'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white text-gray-900 font-sans antialiased selection:bg-gray-900 selection:text-white min-h-screen flex flex-col">
+
+  <!-- ========================================== -->
+  <!-- 1. AUTH / LOGIN VIEW (ENTRY SCREEN)        -->
+  <!-- ========================================== -->
+  <section id="authSection" class="min-h-screen flex items-center justify-center p-4 md:p-8 bg-white transition-opacity duration-300">
+    <div class="w-full max-w-4xl border border-gray-200 rounded-2xl p-6 md:p-10 shadow-sm bg-white">
+      
+      <!-- Top Branding -->
+      <div class="flex flex-col md:flex-row items-center justify-between border-b border-gray-100 pb-6 mb-8 gap-4">
+        <div class="flex items-center space-x-3">
+          <div class="w-11 h-11 rounded-xl bg-gray-900 text-white flex items-center justify-center font-bold text-xl shadow-sm tracking-tight">
+            CC
+          </div>
+          <div>
+            <h1 class="text-xl md:text-2xl font-extrabold tracking-tight text-gray-900 font-display">
+              Channamma<span class="text-gray-500 font-medium">Chums</span>
+            </h1>
+            <p class="text-xs text-gray-500 font-medium">Dedicated Exam Intelligence &bull; RCU Belagavi NEP / CBCS</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-700 border border-gray-200">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse"></span>
+            Semester Exams Active
+          </span>
+          <span class="text-xs text-gray-400 font-mono">v2.5 RCU</span>
+        </div>
+      </div>
+
+      <!-- Main Login Container: Two columns on desktop -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left Column: Interactive Cute Fighting Cats Animation -->
+        <div class="lg:col-span-6 flex flex-col items-center justify-center border border-gray-200 rounded-2xl p-6 bg-white relative overflow-hidden group">
+          <div class="flex items-center justify-between w-full mb-3">
+            <div class="flex items-center space-x-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-gray-300"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-gray-300"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-gray-300"></span>
+            </div>
+            <span class="text-[11px] font-mono uppercase tracking-wider text-gray-600 bg-gray-100 px-2 py-0.5 rounded border border-gray-200">
+              Chums Arena: Playful Sparring
+            </span>
+          </div>
+
+          <!-- THE CUTE FIGHTING CATS ARENA -->
+          <div id="catsArena" class="w-full h-56 md:h-64 flex items-center justify-center relative select-none">
+            
+            <!-- Fight Dust & Sparkle Particles (Pure CSS) -->
+            <div class="fight-cloud fight-cloud-1"></div>
+            <div class="fight-cloud fight-cloud-2"></div>
+            <div class="fight-spark spark-1">&#10022;</div>
+            <div class="fight-spark spark-2">&#10022;</div>
+            <div class="fight-spark spark-3">&#10022;</div>
+            <div class="fight-comic-tag" id="fightComicTag">POW!</div>
+
+            <!-- Left Cat: Mittens (The Tuxedo/Grey Boxer) -->
+            <div class="cat-wrapper cat-left" id="catLeft" title="Click to cheer Mittens!">
+              <svg viewBox="0 0 160 160" class="cat-svg">
+                <!-- Tail -->
+                <path class="cat-tail tail-left" d="M 30,135 Q 10,120 18,95 Q 22,88 28,95" stroke="#111827" stroke-width="6" fill="none" stroke-linecap="round"/>
+                <!-- Body -->
+                <ellipse cx="80" cy="110" rx="36" ry="32" fill="#1F2937" stroke="#111827" stroke-width="2"/>
+                <ellipse cx="80" cy="115" rx="20" ry="20" fill="#F3F4F6"/>
+                <!-- Back Paw / Feet -->
+                <ellipse cx="56" cy="138" rx="12" ry="7" fill="#E5E7EB" stroke="#111827" stroke-width="2"/>
+                <ellipse cx="104" cy="138" rx="12" ry="7" fill="#E5E7EB" stroke="#111827" stroke-width="2"/>
+                <!-- Head -->
+                <circle cx="80" cy="62" r="32" fill="#1F2937" stroke="#111827" stroke-width="2"/>
+                <!-- Ears -->
+                <polygon points="54,42 66,15 78,38" fill="#1F2937" stroke="#111827" stroke-width="2"/>
+                <polygon points="58,38 66,22 74,36" fill="#FCA5A5"/>
+                <polygon points="82,38 94,15 106,42" fill="#1F2937" stroke="#111827" stroke-width="2"/>
+                <polygon points="86,36 94,22 102,38" fill="#FCA5A5"/>
+                <!-- Cute Face -->
+                <ellipse cx="70" cy="58" rx="5" ry="6" fill="#111827" class="cat-eye eye-left"/>
+                <circle cx="68" cy="56" r="1.8" fill="#FFFFFF"/>
+                <ellipse cx="90" cy="58" rx="5" ry="6" fill="#111827" class="cat-eye eye-right"/>
+                <circle cx="88" cy="56" r="1.8" fill="#FFFFFF"/>
+                <!-- Determined Boxer Brow -->
+                <path d="M 64,50 Q 72,54 75,52" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+                <path d="M 96,50 Q 88,54 85,52" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+                <!-- Nose & Mouth -->
+                <polygon points="80,66 77,63 83,63" fill="#F87171"/>
+                <path d="M 77,66 Q 80,70 83,66" stroke="#FFFFFF" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+                <!-- Whiskers -->
+                <line x1="56" y1="62" x2="40" y2="60" stroke="#E5E7EB" stroke-width="1.5"/>
+                <line x1="56" y1="67" x2="40" y2="70" stroke="#E5E7EB" stroke-width="1.5"/>
+                <line x1="104" y1="62" x2="120" y2="60" stroke="#E5E7EB" stroke-width="1.5"/>
+                <line x1="104" y1="67" x2="120" y2="70" stroke="#E5E7EB" stroke-width="1.5"/>
+                <!-- Left Boxing Paw (Swiping) -->
+                <g class="boxing-glove paw-left-punch">
+                  <circle cx="106" cy="85" r="11" fill="#DC2626" stroke="#111827" stroke-width="2"/>
+                  <rect x="98" y="92" width="16" height="5" rx="2" fill="#FFFFFF" stroke="#111827" stroke-width="1"/>
+                </g>
+                <g class="boxing-glove paw-left-guard">
+                  <circle cx="54" cy="92" r="10" fill="#DC2626" stroke="#111827" stroke-width="2"/>
+                </g>
+                <!-- Cute Headband -->
+                <path d="M 52,48 Q 80,44 108,48" stroke="#EF4444" stroke-width="4" stroke-linecap="round" fill="none"/>
+              </svg>
+              <span class="cat-tag">Mittens (Prep Pro)</span>
+            </div>
+
+            <!-- VS Badge in Middle -->
+            <div class="vs-badge" id="vsBadge">
+              <span>VS</span>
+            </div>
+
+            <!-- Right Cat: Whiskers (The Calico/Ginger Challenger) -->
+            <div class="cat-wrapper cat-right" id="catRight" title="Click to cheer Whiskers!">
+              <svg viewBox="0 0 160 160" class="cat-svg">
+                <!-- Tail -->
+                <path class="cat-tail tail-right" d="M 130,135 Q 150,120 142,95 Q 138,88 132,95" stroke="#D97706" stroke-width="6" fill="none" stroke-linecap="round"/>
+                <!-- Body -->
+                <ellipse cx="80" cy="110" rx="36" ry="32" fill="#F59E0B" stroke="#B45309" stroke-width="2"/>
+                <ellipse cx="80" cy="115" rx="20" ry="20" fill="#FEF3C7"/>
+                <!-- Back Paw / Feet -->
+                <ellipse cx="56" cy="138" rx="12" ry="7" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+                <ellipse cx="104" cy="138" rx="12" ry="7" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+                <!-- Head -->
+                <circle cx="80" cy="62" r="32" fill="#F59E0B" stroke="#B45309" stroke-width="2"/>
+                <!-- Calico Patch -->
+                <path d="M 85,32 Q 102,42 98,65 Q 86,60 84,40 Z" fill="#D97706"/>
+                <!-- Ears -->
+                <polygon points="54,42 66,15 78,38" fill="#F59E0B" stroke="#B45309" stroke-width="2"/>
+                <polygon points="58,38 66,22 74,36" fill="#FDE68A"/>
+                <polygon points="82,38 94,15 106,42" fill="#D97706" stroke="#B45309" stroke-width="2"/>
+                <polygon points="86,36 94,22 102,38" fill="#FDE68A"/>
+                <!-- Cute Eyes -->
+                <ellipse cx="70" cy="58" rx="5" ry="6" fill="#111827" class="cat-eye eye-left"/>
+                <circle cx="68" cy="56" r="1.8" fill="#FFFFFF"/>
+                <ellipse cx="90" cy="58" rx="5" ry="6" fill="#111827" class="cat-eye eye-right"/>
+                <circle cx="88" cy="56" r="1.8" fill="#FFFFFF"/>
+                <!-- Determined Boxer Brow -->
+                <path d="M 64,50 Q 72,53 75,51" stroke="#78350F" stroke-width="2" stroke-linecap="round"/>
+                <path d="M 96,50 Q 88,53 85,51" stroke="#78350F" stroke-width="2" stroke-linecap="round"/>
+                <!-- Nose & Mouth -->
+                <polygon points="80,66 77,63 83,63" fill="#F87171"/>
+                <path d="M 77,66 Q 80,70 83,66" stroke="#78350F" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+                <!-- Whiskers -->
+                <line x1="56" y1="62" x2="40" y2="60" stroke="#78350F" stroke-width="1.5"/>
+                <line x1="56" y1="67" x2="40" y2="70" stroke="#78350F" stroke-width="1.5"/>
+                <line x1="104" y1="62" x2="120" y2="60" stroke="#78350F" stroke-width="1.5"/>
+                <line x1="104" y1="67" x2="120" y2="70" stroke="#78350F" stroke-width="1.5"/>
+                <!-- Right Boxing Paw (Swiping) -->
+                <g class="boxing-glove paw-right-punch">
+                  <circle cx="54" cy="85" r="11" fill="#2563EB" stroke="#1E3A8A" stroke-width="2"/>
+                  <rect x="46" y="92" width="16" height="5" rx="2" fill="#FFFFFF" stroke="#111827" stroke-width="1"/>
+                </g>
+                <g class="boxing-glove paw-right-guard">
+                  <circle cx="106" cy="92" r="10" fill="#2563EB" stroke="#1E3A8A" stroke-width="2"/>
+                </g>
+                <!-- Cute Headband -->
+                <path d="M 52,48 Q 80,44 108,48" stroke="#3B82F6" stroke-width="4" stroke-linecap="round" fill="none"/>
+              </svg>
+              <span class="cat-tag">Whiskers (Syllabus Slayer)</span>
+            </div>
+
+            <!-- Floor Line -->
+            <div class="ring-mat"></div>
+          </div>
+
+          <p class="text-xs text-gray-700 text-center mt-3 font-medium flex items-center justify-center gap-1.5">
+            <span>🐾</span> Tap either cat to trigger playful high-speed jab combo!
+          </p>
+        </div>
+
+        <!-- Right Column: Registration / Login Form -->
+        <div class="lg:col-span-6 flex flex-col justify-center">
+          <div class="mb-6">
+            <span class="text-xs uppercase font-bold tracking-wider text-gray-500 font-mono">Student Access</span>
+            <h2 class="text-2xl font-bold text-gray-900 tracking-tight font-display mt-1">Ready for RCU Belagavi Exams?</h2>
+            <p class="text-sm text-gray-600 mt-1">
+              Enter your student details to instantly unlock all 6 semesters, blueprint question predictions, and professor's logic notes.
+            </p>
+          </div>
+
+          <form id="loginForm" class="space-y-4" onsubmit="handleLogin(event)">
+            <div>
+              <label for="studentName" class="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-1.5">
+                Full Student Name <span class="text-red-500">*</span>
+              </label>
+              <div class="relative">
+                <input 
+                  type="text" 
+                  id="studentName" 
+                  required 
+                  placeholder="e.g. Abhishek Patil"
+                  class="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all placeholder:text-gray-400"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="uucmsNumber" class="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-1.5">
+                UUCMS Registration Number <span class="text-red-500">*</span>
+              </label>
+              <div class="relative">
+                <input 
+                  type="text" 
+                  id="uucmsNumber" 
+                  required 
+                  placeholder="e.g. U15ER23S0042"
+                  class="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl text-sm font-mono text-gray-900 uppercase focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all placeholder:text-gray-400"
+                />
+              </div>
+              <p class="text-[11px] text-gray-600 mt-1">Karnataka State Unified University &amp; College Management System ID.</p>
+            </div>
+
+            <!-- Error message container -->
+            <div id="loginError" class="hidden p-3 bg-red-50 border border-red-200 rounded-lg text-xs text-red-600 font-medium"></div>
+
+            <div class="pt-2 flex flex-col gap-2.5">
+              <button 
+                type="submit" 
+                id="loginBtn"
+                class="w-full py-3.5 px-6 bg-gray-900 hover:bg-black text-white font-semibold rounded-xl text-sm transition-all duration-200 flex items-center justify-center space-x-2 shadow-sm hover:shadow active:scale-[0.99]">
+                <span>Enter ChannammaChums Dashboard</span>
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </button>
+
+              <button 
+                type="button" 
+                onclick="fillDemoData()" 
+                class="w-full py-2.5 px-4 bg-white hover:bg-gray-50 border border-gray-200 text-gray-700 font-medium rounded-xl text-xs transition-colors flex items-center justify-center space-x-1.5">
+                <span>⚡ Quick Demo Login (Pre-fill with Sample RCU Student)</span>
+              </button>
+            </div>
+          </form>
+
+          <!-- Footer Trust / Integrity note -->
+          <div class="mt-6 pt-5 border-t border-gray-100 flex items-center justify-between text-[11px] text-gray-600">
+            <span>RCU Belagavi Affiliated &bull; NEP 2020 Pattern</span>
+            <span>100% Free &amp; Offline Cached</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================== -->
+  <!-- 2. MAIN DASHBOARD VIEW (POST-LOGIN)        -->
+  <!-- ========================================== -->
+  <div id="dashboardSection" class="hidden flex-1 flex flex-col bg-white">
+    
+    <!-- Top Global Announcement / Official Links Ticker -->
+    <div class="border-b border-gray-200 bg-white text-xs py-2 px-4 md:px-8">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
+        <div class="flex items-center space-x-2 overflow-hidden text-ellipsis whitespace-nowrap">
+          <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-gray-900 text-white">
+            RCU ALERT
+          </span>
+          <span class="text-gray-600 truncate font-medium">
+            Semester Examination Blueprint 2024-2025: Section A (2M &times; 10), Section B (5M &times; 4), Section C (10M &times; 4).
+          </span>
+        </div>
+        <!-- Official External Portals Navigation -->
+        <div class="flex items-center space-x-3 text-[11px] font-medium shrink-0">
+          <a href="https://uucms.karnataka.gov.in" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-black underline underline-offset-2 flex items-center gap-1">
+            <span>UUCMS Portal</span>
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
+          <span class="text-gray-300">|</span>
+          <a href="https://rcub.ac.in" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-black underline underline-offset-2 flex items-center gap-1">
+            <span>RCUB Time-Table</span>
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
+          <span class="text-gray-300">|</span>
+          <a href="https://rcub.ac.in/Results" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-black underline underline-offset-2 flex items-center gap-1">
+            <span>Exam Results</span>
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="border-b border-gray-200 bg-white sticky top-0 z-40 backdrop-blur-md bg-white/95">
+      <div class="max-w-7xl mx-auto px-4 md:px-8 py-3.5 flex items-center justify-between">
+        
+        <!-- Logo & Title -->
+        <div class="flex items-center space-x-3">
+          <div class="w-9 h-9 rounded-xl bg-gray-900 text-white flex items-center justify-center font-bold text-base shadow-sm">
+            CC
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-lg font-extrabold tracking-tight text-gray-900 font-display">ChannammaChums</span>
+              <span class="text-[10px] uppercase font-mono px-1.5 py-0.5 bg-gray-100 border border-gray-200 text-gray-600 rounded">RCU Belagavi</span>
+            </div>
+            <p class="text-[11px] text-gray-600 hidden sm:block">Pure White Semester Examination Intelligence Engine</p>
+          </div>
+        </div>
+
+        <!-- Student Profile Banner & Logout Controls -->
+        <div class="flex items-center space-x-3">
+          <div class="text-right hidden sm:block">
+            <div class="text-xs font-bold text-gray-900 flex items-center justify-end gap-1.5">
+              <span>Welcome back,</span>
+              <span id="displayStudentName" class="text-black font-extrabold underline decoration-gray-300 decoration-2 underline-offset-2">Student</span>
+            </div>
+            <div class="text-[11px] font-mono text-gray-500">
+              UUCMS: <span id="displayUucms" class="text-gray-800 font-semibold tracking-wide">U000000000</span>
+            </div>
+          </div>
+
+          <div class="h-8 w-px bg-gray-200 hidden sm:block"></div>
+
+          <!-- Quick Action Buttons -->
+          <div class="flex items-center space-x-2">
+            <!-- Print Current Subject Sheet -->
+            <button 
+              onclick="window.print()" 
+              title="Print / Save current notes as PDF"
+              class="px-3 py-1.5 text-xs font-semibold border border-gray-200 rounded-lg text-gray-700 hover:bg-gray-50 hover:border-gray-300 transition-colors flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+              <span>Print Notes</span>
+            </button>
+
+            <!-- Logout Button -->
+            <button 
+              onclick="handleLogout()" 
+              title="Log out and switch student"
+              class="p-2 text-xs font-medium border border-gray-200 rounded-lg text-gray-600 hover:text-red-600 hover:border-red-200 hover:bg-red-50 transition-colors flex items-center gap-1">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+              <span class="text-xs font-semibold hidden md:inline">Logout</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Main Body Container -->
+    <main class="max-w-7xl mx-auto px-4 md:px-8 py-6 w-full flex-1">
+      
+      <!-- Multi-Level Dynamic Navigation Controls -->
+      <div class="border border-gray-200 rounded-2xl p-5 mb-8 bg-white shadow-sm space-y-5">
+        
+        <!-- STEP 1: Course Selection Tabs -->
+        <div>
+          <div class="flex items-center justify-between mb-2.5">
+            <span class="text-xs font-bold uppercase tracking-wider text-gray-500 font-mono flex items-center gap-1.5">
+              <span class="w-4 h-4 rounded-full bg-gray-900 text-white inline-flex items-center justify-center text-[10px]">1</span>
+              Select Degree / Course
+            </span>
+            <span class="text-xs text-gray-600">Rani Channamma University NEP Syllabus</span>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5" id="courseTabsContainer">
+            <!-- Rendered dynamically: BCA, B.Sc, B.Com, BBA -->
+          </div>
+        </div>
+
+        <div class="border-t border-gray-100"></div>
+
+        <!-- STEP 2: Semester Selection Button Bar -->
+        <div>
+          <div class="flex items-center justify-between mb-2.5">
+            <span class="text-xs font-bold uppercase tracking-wider text-gray-500 font-mono flex items-center gap-1.5">
+              <span class="w-4 h-4 rounded-full bg-gray-900 text-white inline-flex items-center justify-center text-[10px]">2</span>
+              Select Semester
+            </span>
+            <span class="text-xs text-gray-600" id="currentCourseInfoBadge">BCA Curriculum</span>
+          </div>
+          <div class="grid grid-cols-3 sm:grid-cols-6 gap-2" id="semesterTabsContainer">
+            <!-- 1st Sem to 6th Sem rendered dynamically -->
+          </div>
+        </div>
+
+        <div class="border-t border-gray-100"></div>
+
+        <!-- Search & Filter Bar -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div class="relative w-full sm:w-80">
+            <input 
+              type="text" 
+              id="subjectSearchInput" 
+              oninput="handleSearch(this.value)"
+              placeholder="Search subject by name or code..."
+              class="w-full pl-9 pr-4 py-2 bg-white border border-gray-200 rounded-xl text-xs text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all"
+            />
+            <svg class="w-4 h-4 text-gray-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
+
+          <div class="flex items-center space-x-2 text-xs text-gray-500 w-full sm:w-auto justify-end">
+            <span id="subjectCountBadge" class="font-semibold text-gray-800">4 Core Subjects</span>
+            <span>&bull;</span>
+            <span class="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 font-medium">NEP Blueprint Verified</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Main Layout: Grid with Subjects Grid & Selected Subject Content View -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- STEP 3: Subject Selector Sidebar / Grid (4 columns on lg) -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-gray-900 font-mono">
+              Course Subjects
+            </h3>
+            <span class="text-[11px] text-gray-600 font-medium">Click to study</span>
+          </div>
+
+          <!-- Subject Cards List -->
+          <div id="subjectsListContainer" class="space-y-2.5">
+            <!-- Injected dynamically via JS -->
+          </div>
+
+          <!-- RCU Belagavi Useful Information Box -->
+          <div class="border border-gray-200 rounded-xl p-4 bg-white space-y-3 mt-6">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-900 font-mono flex items-center gap-1.5">
+              <span>🏛️</span> RCU Examination Blueprint
+            </h4>
+            <div class="text-xs text-gray-600 space-y-2 leading-relaxed">
+              <div class="flex justify-between border-b border-gray-100 pb-1">
+                <span class="font-medium text-gray-700">Section A (2 Marks):</span>
+                <span class="font-mono text-gray-900 font-semibold">Answer any 10 of 12</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-100 pb-1">
+                <span class="font-medium text-gray-700">Section B (5 Marks):</span>
+                <span class="font-mono text-gray-900 font-semibold">Answer any 4 of 6</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-100 pb-1">
+                <span class="font-medium text-gray-700">Section C (10 Marks):</span>
+                <span class="font-mono text-gray-900 font-semibold">Answer any 4 of 6</span>
+              </div>
+              <div class="flex justify-between pt-0.5 font-bold text-gray-900">
+                <span>Total External Marks:</span>
+                <span class="font-mono">80 Marks / 3 Hours</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Tip for Belagavi Students -->
+          <div class="border border-gray-200 rounded-xl p-4 bg-gray-50/50 space-y-2">
+            <p class="text-xs font-semibold text-gray-800 flex items-center gap-1.5">
+              <span>💡</span> Professor's Insider Advice:
+            </p>
+            <p class="text-[11px] text-gray-600 leading-normal">
+              RCU evaluators allocate marks explicitly for neat diagrams, syntax code blocks, and step-by-step algorithms. Always highlight keywords with a pencil.
+            </p>
+          </div>
+        </div>
+
+        <!-- MAIN CONTENT DISPLAY AREA (8 columns on lg) -->
+        <div class="lg:col-span-8">
+          <div id="subjectContentContainer" class="min-h-[500px]">
+            <!-- Injected dynamically based on selected subject -->
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="border-t border-gray-200 bg-white py-6 mt-12 text-xs text-gray-500">
+      <div class="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center space-x-2">
+          <span class="font-bold text-gray-900 font-display">ChannammaChums</span>
+          <span>&bull;</span>
+          <span>Crafted specifically for Rani Channamma University (RCU) Belagavi Students</span>
+        </div>
+        <div class="flex items-center space-x-4 text-gray-600">
+          <span>Pure White Minimalist Theme</span>
+          <span>&bull;</span>
+          <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="hover:text-black font-medium">Back to Top &uarr;</button>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+
+  <!-- ========================================== -->
+  <!-- 3. OFFICIAL RCU QUESTION PAPER VIEWER MODAL-->
+  <!-- ========================================== -->
+  <div id="paperViewerModal" class="hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-3 md:p-6 overflow-y-auto">
+    <div class="bg-white border border-gray-200 rounded-2xl max-w-4xl w-full max-h-[92vh] flex flex-col shadow-2xl relative animate-in fade-in duration-150">
+      
+      <!-- Modal Top Bar -->
+      <div class="flex items-center justify-between p-4 md:px-6 border-b border-gray-100 bg-white rounded-t-2xl shrink-0">
+        <div class="flex items-center space-x-3">
+          <div class="w-8 h-8 rounded-lg bg-gray-900 text-white flex items-center justify-center font-bold text-xs">
+            RCU
+          </div>
+          <div>
+            <h3 id="modalPaperTitle" class="text-sm md:text-base font-bold text-gray-900 font-display">
+              RCU Belagavi Examination Question Paper
+            </h3>
+            <p id="modalPaperSubtitle" class="text-xs text-gray-500 font-mono">
+              Regular Examination Paper
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <!-- Print Paper -->
+          <button 
+            onclick="printActiveQuestionPaper()"
+            class="px-3 py-1.5 bg-gray-900 hover:bg-black text-white text-xs font-semibold rounded-lg flex items-center gap-1.5 transition-colors shadow-xs">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+            <span>Print / Save PDF</span>
+          </button>
+
+          <!-- Copy Paper -->
+          <button 
+            onclick="copyActiveQuestionPaper()"
+            class="px-3 py-1.5 border border-gray-200 hover:bg-gray-50 text-gray-700 text-xs font-semibold rounded-lg hidden sm:flex items-center gap-1.5 transition-colors">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+            <span>Copy Text</span>
+          </button>
+
+          <!-- Close Modal -->
+          <button 
+            onclick="closePaperModal()" 
+            class="p-1.5 text-gray-400 hover:text-black rounded-lg hover:bg-gray-100 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Year Switcher Tab Bar inside Modal -->
+      <div class="px-4 md:px-6 py-2 bg-gray-50/90 border-b border-gray-200 flex flex-wrap items-center justify-between gap-2 shrink-0">
+        <span class="text-[11px] font-bold uppercase tracking-wider text-gray-500 font-mono flex items-center gap-1.5">
+          <span>📅</span> Select Exam Year:
+        </span>
+        <div class="flex items-center space-x-1.5" id="modalYearTabs">
+          <!-- Dynamically populated: 2025 QP, 2024 QP, 2023 QP, 2022 QP, 2021 QP -->
+        </div>
+      </div>
+
+      <!-- Question Paper Sheet View (Scrollable) -->
+      <div id="paperModalBody" class="p-6 md:p-8 overflow-y-auto space-y-6 flex-1 bg-white font-sans text-gray-900">
+        <!-- Rendered dynamically via app.js -->
+      </div>
+
+      <!-- Optional External Link Attachment Bar (Subtle) -->
+      <div class="px-6 py-2.5 border-t border-gray-100 bg-gray-50/70 rounded-b-2xl flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-2">
+        <div class="flex items-center gap-1.5 text-[11px]">
+          <span>💡</span>
+          <span>Authentic university exam pattern. Click "Print / Save PDF" to download as a physical exam paper.</span>
+        </div>
+        <button 
+          onclick="toggleExternalLinkField()"
+          class="text-[11px] font-semibold text-gray-600 hover:text-black underline underline-offset-2">
+          Attach custom Google Drive PDF link
+        </button>
+      </div>
+
+      <!-- Collapsible External Link Field -->
+      <div id="externalLinkDrawer" class="hidden p-4 border-t border-gray-200 bg-white text-xs space-y-2">
+        <label class="block font-bold text-gray-800">Custom Google Drive PDF Link for this paper:</label>
+        <div class="flex gap-2">
+          <input 
+            type="url" 
+            id="activePaperCustomUrlInput" 
+            placeholder="https://drive.google.com/file/d/YOUR_REAL_ID/view?usp=sharing"
+            class="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-xs font-mono"
+          />
+          <button 
+            onclick="saveActivePaperCustomUrl()" 
+            class="px-4 py-2 bg-gray-900 text-white font-semibold rounded-lg text-xs">
+            Save Link
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Toast Notification System -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="bg-gray-900 text-white px-4 py-3 rounded-xl shadow-lg border border-gray-800 text-xs font-medium flex items-center space-x-2">
+      <span id="toastIcon">✓</span>
+      <span id="toastMessage">Action completed successfully</span>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="database.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+

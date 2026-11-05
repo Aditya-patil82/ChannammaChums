@@ -1,0 +1,470 @@
+/* =====================================================================
+   ChannammaChums - Pure White Minimalist Theme & Cats Animation Styles
+   Dedicated to Rani Channamma University (RCU) Belagavi
+   ===================================================================== */
+
+/* Global Reset & Base Typography */
+:root {
+  --bg-pure-white: #FFFFFF;
+  --border-light: #E5E7EB;
+  --text-charcoal: #111827;
+  --text-muted: #6B7280;
+  --surface-subtle: #F9FAFB;
+}
+
+body {
+  background-color: var(--bg-pure-white);
+  color: var(--text-charcoal);
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAFAFA;
+}
+::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}
+
+/* =====================================================================
+   CUTE FIGHTING CATS ARENA & PURE CSS KEYFRAME ANIMATIONS
+   Two cartoon cats playfully boxing / sparring with comedic dust & sparks
+   ===================================================================== */
+
+.fight-cloud {
+  position: absolute;
+  background: radial-gradient(circle, #F3F4F6 40%, rgba(243, 244, 246, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.fight-cloud-1 {
+  width: 48px;
+  height: 32px;
+  bottom: 30px;
+  left: 42%;
+  animation: dustPuff1 2s ease-in-out infinite;
+}
+
+.fight-cloud-2 {
+  width: 60px;
+  height: 40px;
+  bottom: 24px;
+  right: 40%;
+  animation: dustPuff2 2.3s ease-in-out infinite 0.4s;
+}
+
+@keyframes dustPuff1 {
+  0%, 100% {
+    transform: scale(0.6) translateY(0);
+    opacity: 0.1;
+  }
+  45% {
+    transform: scale(1.4) translateY(-14px);
+    opacity: 0.7;
+  }
+  60% {
+    transform: scale(1.6) translateY(-22px);
+    opacity: 0;
+  }
+}
+
+@keyframes dustPuff2 {
+  0%, 100% {
+    transform: scale(0.5) translateY(0);
+    opacity: 0.1;
+  }
+  50% {
+    transform: scale(1.5) translateY(-16px);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(1.7) translateY(-24px);
+    opacity: 0;
+  }
+}
+
+/* Comic Fight Spark Particles */
+.fight-spark {
+  position: absolute;
+  font-size: 14px;
+  font-weight: 900;
+  color: #F59E0B;
+  pointer-events: none;
+  z-index: 20;
+  opacity: 0;
+}
+
+.spark-1 {
+  left: 48%;
+  top: 38%;
+  animation: sparkFlash1 1.8s infinite;
+}
+
+.spark-2 {
+  left: 52%;
+  top: 45%;
+  animation: sparkFlash2 2.1s infinite 0.5s;
+}
+
+.spark-3 {
+  left: 46%;
+  top: 55%;
+  animation: sparkFlash3 1.9s infinite 0.9s;
+}
+
+@keyframes sparkFlash1 {
+  0%, 30%, 100% { opacity: 0; transform: scale(0.2) rotate(0deg); }
+  32% { opacity: 1; transform: scale(1.4) rotate(45deg); }
+  38% { opacity: 0; transform: scale(1.8) translateY(-10px) rotate(90deg); }
+}
+
+@keyframes sparkFlash2 {
+  0%, 45%, 100% { opacity: 0; transform: scale(0.2) rotate(0deg); }
+  48% { opacity: 1; transform: scale(1.3) rotate(-30deg); }
+  54% { opacity: 0; transform: scale(1.7) translateY(-12px) rotate(-60deg); }
+}
+
+@keyframes sparkFlash3 {
+  0%, 65%, 100% { opacity: 0; transform: scale(0.2); }
+  68% { opacity: 1; transform: scale(1.2); }
+  75% { opacity: 0; transform: scale(1.6) translateY(-8px); }
+}
+
+/* Comic "POW!" Tag */
+.fight-comic-tag {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  background: #111827;
+  color: #FFFFFF;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 4px;
+  letter-spacing: 0.1em;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 25;
+  animation: comicPow 2.4s ease-in-out infinite;
+}
+
+@keyframes comicPow {
+  0%, 40%, 100% {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.5) rotate(-5deg);
+  }
+  43% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.2) rotate(6deg);
+  }
+  55% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1) translateY(-6px) rotate(-3deg);
+  }
+  65% {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.8) translateY(-14px);
+  }
+}
+
+/* VS Badge in Middle */
+.vs-badge {
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #111827;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 800;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  z-index: 15;
+  letter-spacing: 0.05em;
+  animation: pulseVs 2s infinite ease-in-out;
+}
+
+@keyframes pulseVs {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.12); }
+}
+
+/* Floor Ring Mat */
+.ring-mat {
+  position: absolute;
+  bottom: 12px;
+  left: 10%;
+  right: 10%;
+  height: 6px;
+  border-radius: 9999px;
+  background: #E5E7EB;
+  z-index: 0;
+}
+
+/* Cat Wrappers */
+.cat-wrapper {
+  position: absolute;
+  bottom: 16px;
+  width: 130px;
+  height: 130px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cat-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.04));
+}
+
+.cat-tag {
+  font-size: 9px;
+  font-weight: 700;
+  color: #4B5563;
+  background: #F3F4F6;
+  border: 1px solid #E5E7EB;
+  padding: 1px 6px;
+  border-radius: 9999px;
+  margin-top: -6px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* Cat 1: Left Cat (Mittens - Tuxedo Boxer) */
+.cat-left {
+  left: calc(50% - 135px);
+  animation: catLeftBob 1.6s ease-in-out infinite;
+}
+
+@keyframes catLeftBob {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  30% {
+    transform: translateY(-8px) rotate(-2deg);
+  }
+  60% {
+    transform: translateY(2px) rotate(1deg);
+  }
+}
+
+/* Cat 2: Right Cat (Whiskers - Ginger Challenger) */
+.cat-right {
+  right: calc(50% - 135px);
+  animation: catRightBob 1.6s ease-in-out infinite 0.3s;
+}
+
+@keyframes catRightBob {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  35% {
+    transform: translateY(-9px) rotate(2deg);
+  }
+  65% {
+    transform: translateY(2px) rotate(-1deg);
+  }
+}
+
+/* Paw Punching Animations */
+.paw-left-punch {
+  transform-origin: 80px 85px;
+  animation: punchLeft 1.2s ease-in-out infinite;
+}
+
+@keyframes punchLeft {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  20% {
+    transform: translate(-4px, 2px) scale(0.95); /* windup */
+  }
+  35% {
+    transform: translate(18px, -4px) scale(1.18); /* forward swipe jab */
+  }
+  50% {
+    transform: translate(6px, -1px) scale(1.05);
+  }
+}
+
+.paw-right-punch {
+  transform-origin: 80px 85px;
+  animation: punchRight 1.2s ease-in-out infinite 0.6s;
+}
+
+@keyframes punchRight {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  20% {
+    transform: translate(4px, 2px) scale(0.95); /* windup */
+  }
+  35% {
+    transform: translate(-18px, -4px) scale(1.18); /* counter swipe */
+  }
+  50% {
+    transform: translate(-6px, -1px) scale(1.05);
+  }
+}
+
+/* Head and Guard Paw Motions */
+.paw-left-guard {
+  animation: guardLeft 1.6s ease-in-out infinite;
+  transform-origin: 54px 92px;
+}
+@keyframes guardLeft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+.paw-right-guard {
+  animation: guardRight 1.6s ease-in-out infinite 0.4s;
+  transform-origin: 106px 92px;
+}
+@keyframes guardRight {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+/* Tails Wagging */
+.tail-left {
+  transform-origin: 30px 135px;
+  animation: tailWiggleLeft 1.4s ease-in-out infinite;
+}
+@keyframes tailWiggleLeft {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-12deg); }
+}
+
+.tail-right {
+  transform-origin: 130px 135px;
+  animation: tailWiggleRight 1.4s ease-in-out infinite 0.2s;
+}
+@keyframes tailWiggleRight {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(12deg); }
+}
+
+/* Eyes Blinking */
+.cat-eye {
+  animation: eyeBlink 4s infinite;
+  transform-origin: center;
+}
+@keyframes eyeBlink {
+  0%, 96%, 100% { transform: scaleY(1); }
+  98% { transform: scaleY(0.1); }
+}
+
+/* Interactive Fast Sparring Mode when clicking cats or arena */
+.frenzy-mode .cat-left {
+  animation: frenzyLeft 0.35s ease-in-out infinite !important;
+}
+.frenzy-mode .cat-right {
+  animation: frenzyRight 0.35s ease-in-out infinite 0.1s !important;
+}
+.frenzy-mode .paw-left-punch {
+  animation: punchLeft 0.3s ease-in-out infinite !important;
+}
+.frenzy-mode .paw-right-punch {
+  animation: punchRight 0.3s ease-in-out infinite !important;
+}
+.frenzy-mode .fight-comic-tag {
+  animation: comicPow 0.6s ease-in-out infinite !important;
+}
+
+@keyframes frenzyLeft {
+  0%, 100% { transform: translate(0, 0) rotate(-2deg); }
+  50% { transform: translate(8px, -6px) rotate(4deg); }
+}
+
+@keyframes frenzyRight {
+  0%, 100% { transform: translate(0, 0) rotate(2deg); }
+  50% { transform: translate(-8px, -6px) rotate(-4deg); }
+}
+
+/* Active tab styles */
+.tab-active {
+  background-color: #111827 !important;
+  color: #FFFFFF !important;
+  border-color: #111827 !important;
+  font-weight: 700 !important;
+}
+
+.tab-inactive {
+  background-color: #FFFFFF;
+  color: #4B5563;
+  border-color: #E5E7EB;
+}
+.tab-inactive:hover {
+  background-color: #F9FAFB;
+  color: #111827;
+  border-color: #D1D5DB;
+}
+
+/* Card Selection Highlights */
+.subject-card-selected {
+  border-color: #111827 !important;
+  background-color: #FFFFFF !important;
+  box-shadow: 0 0 0 1.5px #111827, 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Accordion Transition */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease-out, opacity 0.2s ease-out;
+  opacity: 0;
+}
+.accordion-content.expanded {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* Print Stylesheet for clean physical cheat sheets */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 11pt !important;
+  }
+  header, footer, #authSection, #courseTabsContainer, #semesterTabsContainer, .no-print {
+    display: none !important;
+  }
+  .lg\:col-span-4 {
+    display: none !important;
+  }
+  .lg\:col-span-8 {
+    width: 100% !important;
+  }
+  .accordion-content {
+    max-height: none !important;
+    opacity: 1 !important;
+    display: block !important;
+  }
+}
+
